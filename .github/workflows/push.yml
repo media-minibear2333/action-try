@@ -31,6 +31,6 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-files: 'public/*'
-          destination-github-username: 'minibear2333'
-          destination-repository-name: 'media-minibear2333/media-minibear2333.github.io'
+          destination-github-username: 'media-minibear2333'
+          destination-repository-name: 'media-minibear2333.github.io'
           user-email: 'pzqu@qq.com'
