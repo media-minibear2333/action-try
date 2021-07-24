@@ -25,15 +25,12 @@ jobs:
       - name: Build
         run: hugo --gc --minify --cleanDestinationDir
       
-      - name: Pushes test folder
-        uses: crykn/copy_folder_to_another_repo_action@v1.0.6
+      - name: Pushes to another repository
+        uses: nkoppel/push-files-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: './*'
-          destination_repo: 'media-minibear2333/media-minibear2333.github.io'
-          destination_folder: '*'
-          user_email: 'pzqu@qq.com'
-          user_name: 'minibear2333'
-          commit_msg: '[GHA] Update the test files.'
-
+          source-files: 'public/*'
+          destination-github-username: 'minibear2333'
+          destination-repository-name: 'media-minibear2333/media-minibear2333.github.io'
+          user-email: 'pzqu@qq.com'
