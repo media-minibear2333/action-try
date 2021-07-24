@@ -30,7 +30,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: './'
+          source_folder: './*'
           destination_repo: 'media-minibear2333/media-minibear2333.github.io'
           destination_folder: './'
           user_email: 'pzqu@qq.com'
