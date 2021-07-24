@@ -32,6 +32,6 @@ jobs:
         with:
           source-directory: './'
           destination-github-username: 'media-minibear2333'
-          destination-repository-name: 'media-minibear23.github.io'
+          destination-repository-name: 'media-minibear2333.github.io'
           user-email: pzqu@qq.com
           target-branch: master
