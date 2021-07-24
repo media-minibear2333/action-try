@@ -31,7 +31,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: './'
-          destination-github-username: 'minibear2333'
-          destination-repository-name: 'media-minibear2333/media-minibear23.github.io'
+          destination-github-username: 'media-minibear2333'
+          destination-repository-name: 'media-minibear23.github.io'
           user-email: pzqu@qq.com
           target-branch: master
