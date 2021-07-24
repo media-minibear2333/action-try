@@ -24,15 +24,16 @@ jobs:
 
       - name: Build
         run: hugo --gc --minify --cleanDestinationDir
-
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+      
+      - name: Pushes test folder
+        uses: crykn/copy_folder_to_another_repo_action@v1.0.6
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: './'
-          destination-github-username: 'media-minibear2333'
-          destination-repository-name: 'media-minibear2333.github.io'
-          user-email: pzqu@qq.com
-          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
-          target-branch: master
+          source_folder: './'
+          destination_repo: 'media-minibear2333/media-minibear2333.github.io'
+          destination_folder: './'
+          user_email: 'pzqu@qq.com'
+          user_name: 'minibear2333'
+          commit_msg: '[GHA] Update the test files.'
+
