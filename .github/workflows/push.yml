@@ -1,0 +1,38 @@
+name: Github-Pages
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: ./media
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      - name:
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.57.2'
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify --cleanDestinationDir
+
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: './'
+          destination-github-username: 'minibear2333'
+          destination-repository-name: 'media-minibear2333/media-minibear23.github.io'
+          user-email: pzqu@qq.com
+          target-branch: master
