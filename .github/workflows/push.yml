@@ -30,7 +30,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: 'public/*'
+          source-files: 'media/public/*'
           destination-github-username: 'media-minibear2333'
           destination-repository-name: 'media-minibear2333.github.io'
           user-email: 'pzqu@qq.com'
