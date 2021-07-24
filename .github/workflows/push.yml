@@ -34,4 +34,5 @@ jobs:
           destination-github-username: 'media-minibear2333'
           destination-repository-name: 'media-minibear2333.github.io'
           user-email: pzqu@qq.com
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: master
